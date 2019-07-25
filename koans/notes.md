@@ -53,3 +53,14 @@
     * or
       * there will only ever be one triple in a set
       * once triple is found, those digits should be extracted from the set, then the individual values can be summed, if they are 1s or 5s
+* classes
+  * accessor methods in the form of attr_reader methods are used to access instyance variables outside the class
+  * attr_accessor is a both a getter and a setter method for instance variables
+    * doing `attr_accessor :name` will give the class a .name method which first act as an initializer, then an accessor
+  * self: when used in a class definition, refers to the contining object
+  * classes can be reopened at any point to add mthods
+    * built in classes can be added to in this way
+  * :: is used to access a constant, module, or class defined in another class or module. purpose is namespace resolution
+  * inheritance: 
+    * the super keyword is used to invoke parent behavior
+      * when used in a method inherited from a parent, ie with the same name, it refers to the behavior of the parent method, so it can be added on to. super essentially calls the method and super is a standin for the return value
