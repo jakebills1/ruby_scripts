@@ -64,3 +64,21 @@
   * inheritance: 
     * the super keyword is used to invoke parent behavior
       * when used in a method inherited from a parent, ie with the same name, it refers to the behavior of the parent method, so it can be added on to. super essentially calls the method and super is a standin for the return value
+* Module:
+  * class methods override module methods
+* scope within classes
+  * Global Scopes can be accessed using the :: prefix like `::String`
+* class methods
+  * classes, which are just objects, have many built in methods
+  * a singleton method is one defined outside the class defintion on an instance of the class, or the class itself
+    * other instances of that same object will not have that method, unless the method was defined on the class  
+  * self is a class object inside of the class
+  * from an instance of a class, you can access class methods by `<instance>.class.<class_method>`
+* messages
+  * `<Object>.<message>` where the message is an method that can be called on the object
+    * `.respond_to?` can be used to see if an object resonds to a methods
+  * messages can be called using dot notation or using the send method, `Object.send(:method)`
+    * `.__send__(:message)` also works 
+      * the double underscore is to avoid overriding special methods
+    * the send methods can be used with arguments like `Object.send(:message, arg1, arg2, ...)`
+  
